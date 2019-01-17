@@ -3,6 +3,7 @@ package dp;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class _11054 { // 가장 긴 바이토닉 부분 수열 : http://www.acmicpc.net/problem/11054
@@ -55,6 +56,7 @@ public class _11054 { // 가장 긴 바이토닉 부분 수열 : http://www.acmi
 			ans[i] = d[0][i] + d[1][i];
 		}
 		System.out.println(max(ans) - 1);
+		printd(ans);
 	}
 	
 	private static int max(int[] d) {
@@ -65,5 +67,8 @@ public class _11054 { // 가장 긴 바이토닉 부분 수열 : http://www.acmi
 			}
 		}
 		return max;
+	}
+	private static void printd(int[] d) {
+		System.out.println(Arrays.toString(d));
 	}
 }
