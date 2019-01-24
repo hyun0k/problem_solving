@@ -42,7 +42,7 @@ public class _2225 { // 합분해 : http://www.acmicpc.net/problem/2225
 				}
 			}
 		}
-		System.out.println(d[k][n]);*/
+		System.out.println(d[k][n]);          */
 		
 		for(int i=0;i<=k;i++) {
 			d[0][i] = 1;
