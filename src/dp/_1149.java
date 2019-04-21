@@ -17,10 +17,10 @@ public class _1149 { // RGB거리 : http//www.acmicpc.net/problem/1149
 		StringTokenizer st;
 
 		n = Integer.parseInt(br.readLine());
-		d = new int[n+1][3];
-		cost = new int[n+1][3];
+		d = new int[n + 1][3];
+		cost = new int[n + 1][3];
 
-		// 배열에 비용 저장. 안헷갈리게 배열의 0번째는 비워두고 1번째부터 사용. 
+		// 배열에 비용 저장. 안헷갈리게 배열의 0번째는 비워두고 1번째부터 사용.
 		for (int i = 1; i <= n; i++) {
 			st = new StringTokenizer(br.readLine());
 			for (int j = 0; j < 3; j++) {
@@ -28,7 +28,7 @@ public class _1149 { // RGB거리 : http//www.acmicpc.net/problem/1149
 			}
 		}
 
-		// dp 
+		// dp
 		for (int i = 1; i <= n; i++) {
 
 			d[i][0] = Math.min(d[i - 1][1], d[i - 1][2]) + cost[i][0];
