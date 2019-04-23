@@ -27,9 +27,9 @@ public class _1316 { // 그룹 단어 체커 : http://www.acmicpc.net/problem/13
 		boolean[] check = new boolean[26];
 		for (int i = 0; i < word.length(); i++) {
 			char temp = word.charAt(i);
-			if (check[temp - 'a']) {
+			if (check[temp - 'a']) { // 현재 알파벳이 이미 나온 알파벳일때 
 				return false;
-			} else {
+			} else {  // 현재 알파벳이 처음 나온 알파벳일때 
 				if (i < word.length() - 1 && temp != word.charAt(i + 1)) {
 					check[temp - 'a'] = true;
 				}
