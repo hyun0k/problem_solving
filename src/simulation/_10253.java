@@ -7,6 +7,10 @@ import java.util.StringTokenizer;
 
 public class _10253 { // 헨리 : http://www.acmicpc.net/problem/10253
 
+	/**
+	 *  주어진 부등식을 역수를 취해서 a/b 보다 크거나 같은 최소의 정수 x 를 정한다. x가 단위분수의
+	 *  분모가 되고 분자가 1이 될 때 까지 a, b를 갱신하면서 x를 계속 찾는다. 
+	 */
 	static int T;
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
