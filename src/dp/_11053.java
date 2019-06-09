@@ -8,6 +8,9 @@ import java.util.StringTokenizer;
 
 public class _11053 { // 가장 긴 증가하는 부분 수열 : http://www.acmicpc.net/problem/11053
 
+	/**
+	 *  O(N^2) 방법. N제한이 작으므로 가능. 12015번에서는 N이 커져 시간초과가 나므로 O(NlogN)방법으로 구현. 
+	 */
 	static int n;
 	static int[] a;
 	static int[] d;
