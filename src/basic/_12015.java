@@ -8,8 +8,8 @@ import java.util.StringTokenizer;
 
 public class _12015 { // 가장 긴 증가하는 부분 수열2 : http://www.acmicpc.net/problem/12015
 
-	static int N, ans;
-	static int[] a;
+	static int N, idx, ans;
+	static int[] a, lis;
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 
@@ -18,17 +18,45 @@ public class _12015 { // 가장 긴 증가하는 부분 수열2 : http://www.acm
 
 		N = Integer.parseInt(br.readLine());
 		a = new int[N];
+		lis = new int[N];
 
 		st = new StringTokenizer(br.readLine());
 		for (int i = 0; i < N; i++) {
 			a[i] = Integer.parseInt(st.nextToken());
 		}
 
-		ans = getLIS(a, N);
-		
+		// ans = getLIS(a, N);
+		lis[0] = a[0];
+		idx = 0;
+		for (int i = 1; i < N; i++) {
+			if (lis[idx] < a[i]) {
+				lis[++idx] = a[i];
+			} else {
+				int lower = getLowerBound(a[i]);
+				lis[lower] = a[i];
+			}
+		}
+		ans = idx + 1;
+
 		System.out.println(ans);
 	}
 
+	// 1) lowerbound 이용.
+	private static int getLowerBound(int k) {
+		int start = 0;
+		int end = idx + 1;
+		while (start < end) {
+			int m = (start + end) / 2;
+			if (lis[m] < k) {
+				start = m + 1;
+			} else {
+				end = m;
+			}
+		}
+		return end;
+	}
+
+	// 2) 이진탐색이용.
 	private static int getLIS(int[] arr, int n) {
 		int[] d = new int[n];
 		int size = 0;
