@@ -63,16 +63,4 @@ public class _2352 { // 반도체 설계 : http://www.acmicpc.net/problem/2352
 		return size;
 	}
 
-	// lowerbound위치를 반환하는 함수.
-	// private static int lowerBound(int[] arr, int start, int end, int key) {
-	// while (start < end) {
-	// int m = (start + end) / 2;
-	// if (arr[m] < key) {
-	// start = m + 1;
-	// } else {
-	// end = m;
-	// }
-	// }
-	// return start + 1;
-	// }
 }
