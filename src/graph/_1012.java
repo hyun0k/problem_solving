@@ -8,6 +8,11 @@ import java.util.StringTokenizer;
 
 public class _1012 { // 유기농 배추 : http://www.acmicpc.net/problem/1012
 
+	/**
+	 *  단지 번호 붙이기 문제와 유사함. dfs가 끝날때 cnt를 증가시켜주는것이 다른점.
+	 *  (단지번호붙이기에서는 매 dfs마다 cnt증가)  
+	 */
+	
 	static int T, M, N, K, cnt;
 	static int[][] farm;
 	static boolean[][] visited;
